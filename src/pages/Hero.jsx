@@ -114,18 +114,18 @@ const Hero = () => {
                   </div>
                 </div>
               </div>
-              <div className="relative w-full overflow-hidden lg:w-[60%] xl:w-7/12 lg:order-1">
-                <div className="lg:absolute lg:bottom-0 lg:left-0">
+              <div className="relative w-full overflow-hidden lg:w-[70%] xl:w-8/12 lg:order-1">
+                <div className="lg:absolute lg:bottom-0 lg:left-0 w-full h-full flex justify-center items-center">
                   <img
-                    className=" max-w-lg sm:max-w-2xl md:max-w-3xl lg:max-w-2xl xl:max-w-[600px] drop-shadow-lg"
-                    src="/src/assets/mnv.jpg"
-                    alt=""
+                    className="w-full max-w-none lg:max-w-[80%] xl:max-w-[80%] drop-shadow-lg object-cover"
+                    src="/src/assets/hero image.png"
+                    alt="Description of the image"
                   />
                 </div>
               </div>
-            </div>
-          </section>
-        </div>
+            </div> {/* Closing for <div> */}
+          </section> {/* Closing for <section> */}
+        </div> {/* Closing for <div> */}
       </main>
     </>
   );
