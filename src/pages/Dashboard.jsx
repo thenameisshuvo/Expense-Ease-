@@ -32,7 +32,7 @@ const Dashboard = () => {
         {/* user name  section */}
         <section className="text-5xl  ml-5 py-6 font-bold">
           <p className="">
-            welcome{" "}
+            Welcome{" "}
             <span className="text-transparent bg-clip-text bg-purple-gradient capitalize">
               {user ? `${user}` : "enter your name first"},
             </span>
