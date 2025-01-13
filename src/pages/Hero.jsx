@@ -62,7 +62,7 @@ const Hero = () => {
                           <input
                             ref={userName}
                             type="text"
-                            placeholder="your name"
+                            placeholder="Your name"
                             className="block w-full rounded-2xl border border-neutral-300 bg-transparent py-4 pl-6 pr-20 text-base/6 text-neutral-950 ring-4 ring-transparent transition placeholder:text-neutral-700 focus:border-neutral-950 focus:outline-none "
                           />
                           <button className="absolute inset-y-1 right-1 flex justify-center items-center">
