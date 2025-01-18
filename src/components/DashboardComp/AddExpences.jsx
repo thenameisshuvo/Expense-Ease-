@@ -26,10 +26,10 @@ const Addexpences = memo(({ setAddexpences, expDates }) => {
       <main className="relative shadow-[0_3px_10px_rgb(0,0,0,0.2)]  px-10 py-10 rounded-lg border-2  border-blue-900 ">
         <div className="grid grid-cols-2 justify-around w-full  py-5">
           <p className="font-semibold capitalize text-lg md:text-xl">
-            Add new expence{" "}
+            Add new expense{" "}
           </p>
           <p className="font-semibold capitalize text-lg flex  justify-normal items-center">
-            last expence date :{" "}
+            last expense date :{" "}
             <span
               className={`${
                 expDate
