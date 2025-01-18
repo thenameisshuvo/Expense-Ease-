@@ -118,7 +118,7 @@ const Hero = () => {
                 <div className="lg:absolute lg:bottom-0 lg:left-0 w-full h-full flex justify-center items-center">
                   <img
                     className="w-full max-w-none lg:max-w-[80%] xl:max-w-[80%] drop-shadow-lg object-cover"
-                    src="/src/assets/hero image.png"
+                    src="/src/assets/heroimage.png"
                     alt=""
                   />
                 </div>
