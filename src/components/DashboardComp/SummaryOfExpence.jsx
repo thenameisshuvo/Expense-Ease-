@@ -3,7 +3,7 @@ import { useExpenceData } from "../../context/ExpencsContext/ExpenseContext";
 import SummaryTable from "./SummaryTable";
 
 const SummaryOfExpence = memo(({ time }) => {
-  const { expDate } = time; // get the last added date from addExpences  component
+  const { expDate } = time; // get the last added date from addexpenses  component
   const [total, setTotal] = useState([]);
   const { expenceData } = useExpenceData();
   useEffect(() => {
@@ -14,7 +14,7 @@ const SummaryOfExpence = memo(({ time }) => {
   }, [expenceData]);
 
   const handleDelete = (title) => {
-    const deletedExpence = total.filter((item) => item.title !== title); // the deleted expences from the list
+    const deletedExpence = total.filter((item) => item.title !== title); // the deleted expenses from the list
     setTotal(deletedExpence);
   };
 
@@ -26,7 +26,7 @@ const SummaryOfExpence = memo(({ time }) => {
             <thead className="text-base text-light bg-button capitalize text-center ">
               <tr>
                 <th scope="col" className=" px-2 py-3  md:px-6 md:py-3">
-                  expences category
+                  expenses category
                 </th>
                 <th scope="col" className=" px-2 py-3  md:px-6 md:py-3">
                   amount
