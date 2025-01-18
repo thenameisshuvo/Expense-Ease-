@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useExpenceData } from "../context/ExpencsContext/ExpenseContext";
 import { useContextData } from "../context/MyData";
 import CreateBudget from "./../components/DashboardComp/CreateBudget";
-import Addexpenses from "./../components/DashboardComp/Addexpenses";
+import Addexpences from "./../components/DashboardComp/Addexpences";
 import { motion } from "framer-motion";
 import SummaryOfExpence from "./../components/DashboardComp/SummaryOfExpence";
 import Balance from "./../components/DashboardComp/Balance";
@@ -13,14 +13,14 @@ const Dashboard = () => {
 
   const [expence, setExpence] = useState({
     addIncome: 0,
-    addexpensesmoney: 0,
+    addexpencesmoney: 0,
     balance: 0,
     title: "",
   });
 
   const { user } = useContextData(); // context data for username
 
-  const { setExpenceData } = useExpenceData(); // context data for expenses
+  const { setExpenceData } = useExpenceData(); // context data for expences
   useEffect(() => {
     setExpenceData(expence);
   }, [expence]);
@@ -58,7 +58,7 @@ const Dashboard = () => {
               />
             </motion.section>
 
-            {/* expenses section */}
+            {/* expences section */}
             <motion.section
               initial={{ y: -800 }}
               animate={{ y: 0 }}
@@ -69,8 +69,8 @@ const Dashboard = () => {
               }}
               className="flex justify-center items-center"
             >
-              <Addexpenses
-                setAddexpenses={setExpence}
+              <Addexpences
+                setAddexpences={setExpence}
                 expDates={{ expDate, setExpDate }}
               />
             </motion.section>
