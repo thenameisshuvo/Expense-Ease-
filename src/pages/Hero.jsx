@@ -119,7 +119,7 @@ const Hero = () => {
                   <img
                     className="w-full max-w-none lg:max-w-[80%] xl:max-w-[80%] drop-shadow-lg object-cover"
                     src="/src/assets/hero image.png"
-                    alt="Description of the image"
+                    alt=""
                   />
                 </div>
               </div>
