@@ -11,7 +11,7 @@ const SummaryTable = ({value,date,handleDelete}) => {
                    <span className="bg-warning px-2.5 py-2  md:px-5 rounded-2xl md:py-2 capitalize"> {value.title ? `${value.title}` : "no expenses added yet"}</span>
                 </th>
                 <td className="px-1 py-2 md:px-6 md:py-4 text-xl font-semibold  ">
-                   <span>{value.addexpencesmoney? `$${value.addexpencesmoney}` : "$0"}</span>
+                   <span>{value.addexpensesmoney? `$${value.addexpensesmoney}` : "$0"}</span>
                 </td>
                 <td className="px-1 py-2 md:px-6 md:py-4 text-xl font-semibold">
                     <span className="capitalize">{date ? date : "- "}</span>

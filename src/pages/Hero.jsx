@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { useContextData } from "../context/MyData";
 
 const Hero = () => {
-  const text = "An easy way to keep track all expences.".split("");
+  const text = "An easy way to keep track all expenses.".split("");
   const userName = useRef(null);
 
   const { setUser } = useContextData();
@@ -53,7 +53,7 @@ const Hero = () => {
                         }}
                         className="mt-6 font-semibold text-base text-black sm:text-xl lg "
                       >
-                        Our ExpensEase helps you to predict your expences based
+                        Our ExpensEase helps you to predict your expenses based
                         on your previous activity and shares how you should
                         manage your money.
                       </motion.p>

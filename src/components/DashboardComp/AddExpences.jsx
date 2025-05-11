@@ -1,7 +1,7 @@
 import { memo, useCallback, useRef } from "react";
 import ExpenceButton from "./ExpenceButton";
 
-const Addexpences = memo(({ setAddexpences, expDates }) => {
+const Addexpenses = memo(({ setAddexpenses, expDates }) => {
   const { expDate, setExpDate } = expDates;
   const addExpence = useRef(null);
   const addExpenceTitle = useRef(null);
@@ -9,10 +9,10 @@ const Addexpences = memo(({ setAddexpences, expDates }) => {
   const handleExpanceClick = useCallback((e) => {
     e.preventDefault();
     if (addExpence.current.value === null) return;
-    setAddexpences((prev) => ({
+    setAddexpenses((prev) => ({
       ...prev,
-      addexpencesmoney:
-        prev.addexpencesmoney + Number.parseInt(addExpence.current.value),
+      addexpensesmoney:
+        prev.addexpensesmoney + Number.parseInt(addExpence.current.value),
       balance: prev.balance - Number.parseInt(addExpence.current.value),
       addIncome: prev.addIncome - Number.parseInt(addExpence.current.value),
       title: addExpenceTitle.current.value,
@@ -50,14 +50,14 @@ const Addexpences = memo(({ setAddexpences, expDates }) => {
               type="number"
               required
               ref={addExpence}
-              placeholder="Add expences money"
+              placeholder="Add expenses money"
               className="rounded-md py-3 px-2 shadow-md border-none outline-none focus:outline-warning focus:outline-2"
             />
             <input
               type="text"
               required
               ref={addExpenceTitle}
-              placeholder="Add title of expences"
+              placeholder="Add title of expenses"
               className="rounded-md py-3 px-2 shadow-md border-none outline-none focus:outline-warning focus:outline-2"
             />
           </div>
@@ -71,4 +71,4 @@ const Addexpences = memo(({ setAddexpences, expDates }) => {
   );
 });
 
-export default Addexpences;
+export default Addexpenses;
