@@ -40,7 +40,7 @@ const Dashboard = () => {
         </section>
 
         <div className=" pt-10 flex flex-col justify-center items-center gap-5 ">
-          <section className="grid grid-cols-1 w-full lg:gap-0 gap-8  md:grid-cols-2 lg:grid-cols-3   justify-center items-center ">
+          <section className="grid grid-cols-1 w-full gap-8 md:grid-cols-2 lg:grid-cols-3 justify-center items-center ">
             {/*  budget section */}
             <motion.section
               initial={{ y: -500 }}

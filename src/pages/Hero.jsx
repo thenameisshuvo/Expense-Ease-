@@ -80,9 +80,9 @@ const Hero = () => {
 
                     <div className="mt-8 border-t-2 border-black sm:mt-14">
                       <div className="pt-8 sm:flex sm:items-center sm:justify-between sm:pt-14">
-                        <p className="text-lg flex hover:underline  justify-center items-center gap-1 group font-semibold text-black">
-                          App available on{" "}
-                          <span className="group-hover:translate-x-3 transition-all duration-150 ease-linear ">
+                        <p className="text-lg flex hover:underline  justify-center items-center gap-1 group font-semibold text-black relative z-30">
+                          App available {" "}
+                          <span className="group-hover:translate-x-3 transition-all duration-150 ease-linear z-40 relative">
                             {" "}
                             <FaArrowRight />{" "}
                           </span>

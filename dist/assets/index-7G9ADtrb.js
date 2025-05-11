@@ -20344,7 +20344,7 @@ const vk = E.memo(({ setAddIncone: e, adDates: t }) => {
               }),
               k.jsxs("button", {
                 type: "submit",
-                children: [" ", k.jsx(xk, { value: "Add expence" })],
+                children: [" ", k.jsx(xk, { value: "Add Expense" })],
               }),
             ],
           }),

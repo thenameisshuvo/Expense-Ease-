@@ -63,7 +63,7 @@ const Addexpenses = memo(({ setAddexpenses, expDates }) => {
           </div>
           <button type="submit">
             {" "}
-            <ExpenceButton value="Add expence" />
+            <ExpenceButton value="Add Expense" />
           </button>
         </form>
       </main>
