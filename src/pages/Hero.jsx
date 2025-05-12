@@ -4,6 +4,7 @@ import { NavLink, Link } from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { useContextData } from "../context/MyData";
+import heroImage from "../assets/heroimage.png";
 
 const Hero = () => {
   const text = "An easy way to keep track all expenses.".split("");
@@ -118,7 +119,7 @@ const Hero = () => {
                 <div className="lg:absolute lg:bottom-0 lg:left-0 w-full h-full flex justify-center items-center">
                   <img
                     className="w-full max-w-none lg:max-w-[80%] xl:max-w-[80%] drop-shadow-lg object-cover"
-                    src="/src/assets/heroimage.png"
+                    src={heroImage}
                     alt=""
                   />
                 </div>
