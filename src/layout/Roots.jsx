@@ -6,7 +6,7 @@ import { DataProvider } from "../context/DataProvider";
 import ExpenceContextProvider from "../context/ExpencsContext/ExpenceContextProvider";
 
 const Roots = () => {
-  document.title = "ExpensEase";
+  document.title = "Expenseease";
   return (
     <>
       <main className="">

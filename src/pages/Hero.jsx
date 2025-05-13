@@ -1,6 +1,6 @@
 import { useCallback, useRef } from "react";
 import Button from "./../components/Button";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink, Link, useNavigate } from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { useContextData } from "../context/MyData";
@@ -9,13 +9,14 @@ import heroImage from "../assets/heroimage.png";
 const Hero = () => {
   const text = "An easy way to keep track all expenses.".split("");
   const userName = useRef(null);
-
+  const navigate = useNavigate();
   const { setUser } = useContextData();
   const handleClick = useCallback((e) => {
     e.preventDefault();
     if (userName.current.value === "") return;
     setUser(userName.current.value);
-  });
+    navigate("/dashboard"); // Navigate after setting user
+  }, [setUser, navigate]);
 
   return (
     <>
@@ -54,19 +55,19 @@ const Hero = () => {
                         }}
                         className="mt-6 font-semibold text-base text-black sm:text-xl lg "
                       >
-                        Our ExpensEase helps you to predict your expenses based
+                        Our Expenseease helps you to predict your expenses based
                         on your previous activity and shares how you should
                         manage your money.
                       </motion.p>
-                      <form className="mt-6  " onSubmit={handleClick}>
-                        <div className="relative w-fit  mt-6">
+                      <form className="mt-6" onSubmit={handleClick}>
+                        <div className="relative w-fit mt-6">
                           <input
                             ref={userName}
                             type="text"
                             placeholder="Your name"
                             className="block w-full rounded-2xl border border-neutral-300 bg-transparent py-4 pl-6 pr-20 text-base/6 text-neutral-950 ring-4 ring-transparent transition placeholder:text-neutral-700 focus:border-neutral-950 focus:outline-none "
                           />
-                          <button className="absolute inset-y-1 right-1 flex justify-center items-center">
+                          <button type="submit" className="absolute inset-y-1 right-1 flex justify-center items-center">
                             <Button value="submit" />
                           </button>
                         </div>

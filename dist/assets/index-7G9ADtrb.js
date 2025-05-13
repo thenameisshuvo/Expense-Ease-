@@ -18822,7 +18822,7 @@ const HC = (e, t) =>
   Kr = AS(KC),
   GC = () => {
     const [e, t] = E.useState(!1),
-      n = "ExpensEase".split("");
+      n = "Expenseease".split("");
     return k.jsx(k.Fragment, {
       children: k.jsx("header", {
         className: " inset-x-0 top-0 z-10 w-full bg-light",
@@ -18896,7 +18896,7 @@ const HC = (e, t) =>
     });
   },
   XC = () => (
-    (document.title = "ExpensEase"),
+    (document.title = "Expenseease"),
     k.jsx(k.Fragment, {
       children: k.jsx("main", {
         className: "",
@@ -19132,7 +19132,7 @@ const ok = () => {
                                   className:
                                     "mt-6 font-semibold text-base text-black sm:text-xl lg ",
                                   children:
-                                    "Our ExpensEase helps you to predict your expenses based on your previous activity and shares how you should manage your money.",
+                                    "Our Expenseease helps you to predict your expenses based on your previous activity and shares how you should manage your money.",
                                 }),
                                 k.jsx("form", {
                                   className: "mt-6  ",

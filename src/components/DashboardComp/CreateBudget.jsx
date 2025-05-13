@@ -16,12 +16,13 @@ const CreateBudget = memo(({ setAddIncone, adDates }) => {
     const currentAddMoney = new Date().toLocaleDateString();
     setAddDate(currentAddMoney);
 
-    toast("your budget has been added "); //react toastify
+    toast("Your budget has been added");
+    addBudget.current.value = ""; // Clear input after submission
   });
 
   return (
-    <>
-      <main className=" relative shadow-[0_3px_10px_rgb(0,0,0,0.2)] h-full flex flex-col justify-center items-center  px-10 py-10 rounded-lg border-2  border-blue-900  ">
+    <div className="px-4 sm:px-6 lg:px-8 w-full">
+      <main className="w-full max-w-4xl mx-auto px-8 py-10 rounded-xl border border-blue-900 shadow-lg flex flex-col justify-center items-center">
         <ToastContainer
           position="top-left"
           autoClose={2000}
@@ -34,40 +35,40 @@ const CreateBudget = memo(({ setAddIncone, adDates }) => {
           pauseOnHover
           theme="dark"
         />
-        <div className="grid grid-cols-2 h-full justify-between items-center   py-5">
-          <p className="font-semibold capitalize text-lg md:text-xl ">
-            Add your budget{" "}
+        <div className="grid grid-cols-1 md:grid-cols-2 w-full gap-6 pb-6">
+          <p className="font-semibold capitalize text-lg md:text-xl">
+            Add your budget
           </p>
-          <p className="font-semibold  flex justify-center items-center capitalize text-lg  ">
-            last added date :{" "}
+          <p className="font-semibold flex items-center gap-2 capitalize text-lg">
+            Last added date:
             <span
               className={`${
                 adDate
-                  ? "border px-2 py-1 rounded-xl bg-success "
-                  : "text-base "
+                  ? "border px-2 py-1 rounded-xl bg-success"
+                  : "text-base"
               }`}
             >
-              {adDate ? `${adDate}` : "-"}
+              {adDate ? adDate : "-"}
             </span>
           </p>
         </div>
         <form
           onSubmit={handleClick}
-          className="flex flex-col w-full justify-center items-center gap-5 "
+          className="flex flex-col w-full md:w-2/3 items-center gap-6"
         >
           <input
             required
             ref={addBudget}
             type="number"
             placeholder="Enter Budget"
-            className="rounded-md py-3 px-2 shadow-md border-none outline-none focus:outline-success focus:outline-2"
+            className="w-full rounded-md py-3 px-4 shadow-md outline-none focus:outline-success focus:outline-2"
           />
           <button type="submit">
             <Button value="Add Budget" />
           </button>
         </form>
       </main>
-    </>
+    </div>
   );
 });
 

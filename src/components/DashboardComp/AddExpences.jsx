@@ -22,52 +22,51 @@ const Addexpenses = memo(({ setAddexpenses, expDates }) => {
   });
 
   return (
-    <>
-      <main className="relative shadow-[0_3px_10px_rgb(0,0,0,0.2)]  px-10 py-10 rounded-lg border-2  border-blue-900 ">
-        <div className="grid grid-cols-2 justify-around w-full  py-5">
+    <div className="px-4 sm:px-6 lg:px-8 w-full">
+      <main className="w-full max-w-4xl mx-auto px-8 py-10 rounded-xl border border-blue-900 shadow-lg">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pb-6">
           <p className="font-semibold capitalize text-lg md:text-xl">
-            Add new expense{" "}
+            Add new expense
           </p>
-          <p className="font-semibold capitalize text-lg flex  justify-normal items-center">
-            last expense date :{" "}
+          <p className="font-semibold capitalize text-lg flex items-center gap-2">
+            Last expense date:
             <span
               className={`${
                 expDate
-                  ? "border px-2 py-1 rounded-xl bg-warning "
-                  : "text-base "
+                  ? "border px-2 py-1 rounded-xl bg-warning"
+                  : "text-base"
               }`}
             >
-              {expDate ? `${expDate}` : "-"}
+              {expDate ? expDate : "-"}
             </span>
           </p>
         </div>
         <form
           onSubmit={handleExpanceClick}
-          className="flex flex-col justify-center items-center gap-5"
+          className="flex flex-col items-center gap-6"
         >
-          <div className="flex flex-col justify-center md:flex-row  items-center gap-4">
+          <div className="flex flex-col md:flex-row gap-4 w-full justify-center">
             <input
               type="number"
               required
               ref={addExpence}
-              placeholder="Add expenses money"
-              className="rounded-md py-3 px-2 shadow-md border-none outline-none focus:outline-warning focus:outline-2"
+              placeholder="Add expenses amount"
+              className="w-full md:w-1/2 rounded-md py-3 px-4 shadow-md outline-none focus:outline-warning focus:outline-2"
             />
             <input
               type="text"
               required
               ref={addExpenceTitle}
-              placeholder="Add title of expenses"
-              className="rounded-md py-3 px-2 shadow-md border-none outline-none focus:outline-warning focus:outline-2"
+              placeholder="Add title of expense"
+              className="w-full md:w-1/2 rounded-md py-3 px-4 shadow-md outline-none focus:outline-warning focus:outline-2"
             />
           </div>
           <button type="submit">
-            {" "}
             <ExpenceButton value="Add Expense" />
           </button>
         </form>
       </main>
-    </>
+    </div>
   );
 });
 

@@ -5,7 +5,7 @@ import { useState } from "react";
 
 const Navbar = () => {
   const [click, setClick] = useState(false);
-  const logo = "ExpensEase".split("");
+  const logo = "Expenseease".split("");
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 bg-light shadow-sm">
