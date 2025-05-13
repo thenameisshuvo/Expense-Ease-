@@ -34,7 +34,7 @@ const Dashboard = () => {
           <p className="text-4xl md:text-5xl lg:text-6xl font-bold text-text-primary">
             Welcome
             <span className="text-transparent bg-clip-text bg-purple-gradient capitalize ml-2">
-              {user ? user : "please enter your name first"}
+              {user ? user : "Visitor"}
             </span>
           </p>
         </section>
