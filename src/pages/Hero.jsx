@@ -119,7 +119,7 @@ const Hero = () => {
               <div className="relative w-full overflow-hidden lg:w-[70%] xl:w-8/12 lg:order-1">
   <div className="lg:absolute lg:bottom-0 lg:left-0 w-full h-full flex justify-center items-center">
     <img
-      className="w-full max-w-[220px] sm:max-w-[260px] md:max-w-[320px] lg:max-w-[380px] xl:max-w-[420px] 2xl:max-w-[480px] h-auto aspect-[9/19] drop-shadow-lg object-contain"
+      className="w-full max-w-[340px] sm:max-w-[380px] md:max-w-[420px] lg:max-w-[480px] xl:max-w-[520px] 2xl:max-w-[560px] h-auto aspect-[9/19] drop-shadow-lg object-contain"
       src={heroImage}
       alt="ExpenseEase Hero"
     />
